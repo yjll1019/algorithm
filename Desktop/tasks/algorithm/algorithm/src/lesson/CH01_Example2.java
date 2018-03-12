@@ -13,7 +13,7 @@ public class CH01_Example2 {
 
 	public static void main(String[] args) {
 		for(int i=3; i<=10; ++i) {
-		System.out.printf("%d %d\n", i, sum(i));
+			System.out.printf("%d %d\n", i, sum(i));
 		}
 	}
 	

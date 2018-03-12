@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*
  * 작성일자 : 2018년 03월 10일
- * 재귀 호출을 이용해서 binaryTree add메소드를 구현한다.
+ * 내 용 : 재귀 호출을 이용해서 binaryTree add메소드를 구현한다.
  */
 
 public class BinaryTreeTest {
