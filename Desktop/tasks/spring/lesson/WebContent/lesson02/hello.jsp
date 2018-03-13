@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<h1>안녕 JSP!</h1>
-<% out.print("<H1>안녕 JSP!</H1>"); %>
+<h1>안녕 JSP!!</h1>
+<% out.print("<H1>안녕 JSP!!</H1>"); %>
 
 </body>
 </html>
