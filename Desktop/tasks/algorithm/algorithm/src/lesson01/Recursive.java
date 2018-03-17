@@ -1,5 +1,8 @@
 package lesson01;
-
+/*
+ * 작성일자 : 2018년 03월 17일
+ * 내 용 : 재귀 호출
+ */
 public class Recursive {
 	static int rec(int n) {
 		if(n<=1) return 1; //종료 조건
