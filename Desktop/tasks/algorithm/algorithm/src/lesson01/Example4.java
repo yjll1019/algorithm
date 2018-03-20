@@ -2,7 +2,7 @@ package lesson01;
 
 /*
  * 작성일자 : 2018년 03월 18일 일요일
- * 내 용 : 재귀호출을 이용한 Node객체 추가
+ * 내 용 : 반복문, 재귀호출을 이용한 Node객체 추가
  */
 public class Example4 {
 
@@ -35,15 +35,11 @@ public class Example4 {
 			p.next = new Node(value,null);
 		}
 		
-		public void addTailNode(int value, Node node) {
+		public void addTailRecursive(int value) {
 			//재귀호출 이용
-			Node p = node;
-			if(p.next==null) {
-				p.next = new Node(value,null);
-				return ;
-			}
-			addTailNode(value, p.next);
-			 
+			
+			if(this.next!=null) this.addTailRecursive(value);
+			else this.next = new Node(value, null);
 		}
 	}
 	
