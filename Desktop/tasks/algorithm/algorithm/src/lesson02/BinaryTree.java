@@ -1,5 +1,4 @@
 package lesson02;
-////////////////수정중 완성 아님
 /*
  * 작성일자 : 2018년 03월 22일
  * 내 용 : 입력 배열의 중간 값과 찾을 값을 비교한다.
@@ -10,21 +9,13 @@ package lesson02;
 public class BinaryTree {
 
 	static int search2(int [] a, int start, int end, int value) {
-
-		int middle = (start+end)/2;
 		
-		while(start <= end) {
-			if(a[middle]>value) {
-				end = middle-1;
-				middle = search2(a, start, end, value);
-			}
-			else if(a[middle]<value) {
-				start = middle+1;
-				middle = search2(a, start, end, value);
-			}
-			else if(a[middle]==value) {
-				return middle;
-			}
+		while(start<=end) {
+			//반복문을 사용하기때문에 재귀 호출은 필요 없음!
+			int middle = (start+end)/2;
+			if(a[middle]>value) end=middle-1;
+			else if(a[middle]<value) start=middle+1;
+			else return middle;
 		}
 		return -1;
 		
@@ -35,9 +26,10 @@ public class BinaryTree {
 		System.out.println("Search2 : 이예지");
 		
 		int [] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-		int [] b = {0,1,2,3,8};
-		System.out.println(search2(b,0,b.length-1,9));
-		//System.out.println(search2(a, 0,a.length-1, 11));
+
+		System.out.println(search2(a, 0,a.length-1, 11));
+		System.out.println(search2(a, 0,a.length-1, 15));
+		System.out.println(search2(a, 0,a.length-1, -1));
 	}
 
 }

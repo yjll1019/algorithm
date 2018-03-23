@@ -51,7 +51,7 @@ public class Example4 {
 	static int search3(int[]a , int start, int end, int value) {
 		//O(log n)
 		int middle = (start+end)/2;
-		
+	
 		if(start>end) return -1;
 		
 		if(a[middle]>value) {
@@ -60,9 +60,8 @@ public class Example4 {
 		else if(a[middle]<value) {
 			middle = search3(a, middle+1, end, value);
 		}
-		else return middle;
 		
-		return middle;
+		return middle;//a[middle]==valueÀÌ¸é! 
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
