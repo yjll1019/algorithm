@@ -38,7 +38,7 @@ public class Example4 {
 		public void addTailRecursive(int value) {
 			//재귀호출 이용
 			
-			if(this.next!=null) this.addTailRecursive(value);
+			if(this.next!=null) this.next.addTailRecursive(value);
 			else this.next = new Node(value, null);
 		}
 	}
@@ -61,10 +61,10 @@ public class Example4 {
 		
 		Node root2 = new Node(0,null);
 		
-		System.out.print("addTailNode메소드 호출 결과: ");
+		System.out.print("addTailRecursive메소드 호출 결과: ");
 		
 		for(int i=1; i<=10; ++i) {
-			root2.addTail(i);
+			root2.addTailRecursive(i);
 		}
 		
 		root2.printAll();
