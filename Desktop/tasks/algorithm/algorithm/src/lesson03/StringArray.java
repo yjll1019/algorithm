@@ -18,7 +18,7 @@ public class StringArray {
 	
 	static int findMin(String[] a, int start) {
 		//배열 a[start]에서 부터 끝까지 원소 중 가장 작은 값의 위치(인덱스)를 리턴하는 메소드 findMin
-		//앞에서부터 시작해 최솟값을 찾아 앞에 위치시키는 방식
+		//앞에서부터 시작해 최솟값을 찾음.
 		
 		int min = start;
 		for(int i=start; i<a.length; ++i) {
@@ -29,7 +29,7 @@ public class StringArray {
 	}
 	
 	static void selectionSort(String[] a) {
-		//O(log n)
+
 		int min=0;
 		
 		for(int i=0; i<a.length-1; ++i) { 
