@@ -1,14 +1,13 @@
 package task;
 /*
  * 작성일 : 2018년 04월 29일
- * 내 용 : 예) 1001 이면 바이너리 갭의 길이가 2
- * 			529는 이진수로 1000010001 이므로 바이너리 갭의 길이가 4
- * 			20은 이진수로  10100이므로 바이너리 갭의 길이가 1
- * 			15는 이진수로  1111이므로 바이너리 갭의 길이가 0이다
- *			solution메소드의 매개변수로 양의 정수를 입력하면 바이너리 갭의 길이를 리턴하는 메소드 작성.
+ * 내 용 : codility lesson1 Iterations 참고 
+ * 		예) 1001 이면 바이너리 갭의 길이가 2
+ * 		529는 이진수로 1000010001 이므로 바이너리 갭의 길이가 4
+ * 		20은 이진수로  10100이므로 바이너리 갭의 길이가 1
+ * 		15는 이진수로  1111이므로 바이너리 갭의 길이가 0이다
+ *		solution메소드의 매개변수로 양의 정수를 입력하면 바이너리 갭의 길이를 리턴하는 메소드 작성.
  */
-
-// 1. 이진수로 바꾸기  2.양쪽이 1 1인지 검사  3. 그 안의 연속된 0이 몇개인지 카운트하기
 
 public class BinaryGap {
 
@@ -17,18 +16,22 @@ public class BinaryGap {
 		int count = 0;
 		int max = 0 ;
 		System.out.print(n+"를 이진수로 : "+a);
-		if(a.charAt(0)=='0' || a.charAt(a.length()-1)=='0') return 0;
+
 		
-		for(int i=0; i<a.length()-1; i++) {
-			if(a.charAt(i)=='0') count++;
-			else {
-				max = (max>count)? max : count; 
+		for(int i=0; i<a.length(); ++i) {
+			if(a.charAt(i)=='1') {
+				max = (max>count)? max : count;
 				count = 0;
 			}
+			if(a.charAt(i)=='0') {
+				count++;
+			}
 		}
-		return (max>count)? max : count;
+		return max;
 	}
 
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("task_BinaryGap : 이예지");
@@ -37,6 +40,7 @@ public class BinaryGap {
 		System.out.println(" >> 1041의 BinaryGap 길이  : "+ solution(1041));
 		System.out.println(" >> 8488의 BinaryGap 길이  "+ solution(8489));
 		System.out.println(" >> 1181825의 BinaryGap 길이 "+ solution(1181825));
+		
 	}
 
 }
