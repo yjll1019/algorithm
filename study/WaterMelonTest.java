@@ -6,17 +6,18 @@ package study;
 public class WaterMelonTest {
 	
 		public String watermelon(int n) {
-		      StringBuilder str = new StringBuilder();
-		      String s ="수박";
-		         for(int i=0; i<n/2; ++i){
-		           str.append(s);
-		          if(n%2==1){
-		             str.append(s.charAt(0));
-		          }
-		        }
-		      return str.toString();
+			 String s ="";
+			    for(int i=0; i<n; ++i){
+			    	if(i%2==0)
+			        s+="수";
+			      else{
+			      	s+="박";
+			      }
+			    }
+					return s;
 		}
 	
+		
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		WaterMelonTest wm = new WaterMelonTest();
