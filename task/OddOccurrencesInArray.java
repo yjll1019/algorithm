@@ -6,10 +6,10 @@ package task;
  */
 
 /*
-  	xorÀÇ Æ¯Â¡
- 	a ^ a = a;
- 	a ^ 0 = 0;
-  	a ^ a ^ a = a;
+  	xorÀÇ Æ¯Â¡  : °ªÀ» Â¦¼ö¹ø ^ÇÏ¸é 0 È¦¼ö¹ø ^ ÇÏ¸é a.
+ 	a ^ a = 0;
+ 	a ^ 0 = a;
+  	( a ^ a )^ a = a;
   */
 
 public class OddOccurrencesInArray {
