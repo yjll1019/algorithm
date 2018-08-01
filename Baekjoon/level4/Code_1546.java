@@ -3,7 +3,7 @@ package level4;
 import java.util.Scanner;
 
 /*
- * 작성일 : 2018년 07월 28일
+ * 작성일 : 2018년 08월 01일
  * 내 용 : 평균
  */
 public class Code_1546 {
@@ -15,25 +15,25 @@ public class Code_1546 {
 		
 		int num = sc.nextInt();
 		
-		String[] score = sc.nextLine().split(" ");
+		sc.nextLine();
 		
-		int max=Integer.parseInt(score[0]);
+		String[] arr = sc.nextLine().split(" ");
+		double sum=0;
+		double max = Integer.parseInt(arr[0]);
 		
-		for(int i=1; i<num; ++i) {
-			int x = Integer.parseInt(score[i]);
+		for(int i=1; i<arr.length; ++i) {
+			int x = Integer.parseInt(arr[i]);
 			if(max<x)
 				max = x;
 		}
-		
-		int sum = max;
-		
-		for(int i=0; i<score.length; ++i) {
-			int x = Integer.parseInt(score[i]);
-			if(max!=x)
-				sum+=x/max*100;
+
+		for (int i = 0; i < arr.length; ++i) {
+			double y = Integer.parseInt(arr[i]);
+			sum += y / max * 100;
 		}
 		
-		System.out.println(sum);
+		System.out.println(String.format("%.2f", sum/num));
+		
 	}
 
 }
