@@ -12,10 +12,10 @@ public class Code_2873 {
 	static StringBuffer s = new StringBuffer();//reverse용
 	
 	static void appendString(StringBuffer stringBuffer, char s, int n) {
-//		System.out.println("넣기");
 		for(int i=0; i<n; ++i)
 			sb.append(s);
-		System.out.print(sb);
+		System.out.println(sb);
+		sb = new StringBuffer();
 	}
 	
 	public static void main(String[] args) {
@@ -24,6 +24,7 @@ public class Code_2873 {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 	
+		
 		int[][] a = new int[n][m];
 		
 		for(int i=0; i<n; ++i) {
@@ -60,26 +61,29 @@ public class Code_2873 {
 
 			int minX=0;
 			int minY=1;
+			
 			//최소값의 위치 찾기
 			for(int i=0; i<n; ++i) {
 				for(int j=0; j<m; ++j) {
-					if(i!=0&&j!=0)
-						if(a[minX][minY]<a[i][j]) {
+					if((i+j)%2==1) //검은 칸일때
+						if(a[minX][minY]>a[i][j]) {
 							minX = i;
 							minY = j;
 						}
 				}
 			}
 			
+			System.out.println("minX: "+minX+" minY: "+minY+"->"+a[minX][minY]);
+			
 			//최소값과 같은 행일때까지 지점A,B를 한 행씩 이동.
 			int ax=0, ay=0;
-			while(ax!=minX) {
+			while(ax!=minX) { //짝수면 오른쪽+아래 , 홀수면 왼쪽+아래 
 				if(ax%2==0) {//한줄씩 이동
 					appendString(sb,'R', m-1);
-					appendString(sb,'U', 1);
+					appendString(sb,'D', 1);
 				}else {
 					appendString(sb,'L', m-1);
-					appendString(sb,'U', 1);	
+					appendString(sb,'D', 1);	
 				}
 				ax++;
 			}
@@ -119,8 +123,8 @@ public class Code_2873 {
 			}
 			
 			s.reverse();
-			
-			System.out.println(s);
 		}
+		System.out.println(s);
+		
 	}	
 }	
