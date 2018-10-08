@@ -142,3 +142,9 @@
 * Baekjoon 1744 [수 묶기](https://github.com/yjll1019/skhucode-yeji/blob/master/greedy/Code_1744.java)
 * Baekjoon 1931 [회의실배정](https://github.com/yjll1019/skhucode-yeji/blob/master/greedy/Code_1931.java)
 * Baekjoon 2875 [대회or인턴](https://github.com/yjll1019/skhucode-yeji/blob/master/greedy/Code_2875.java)
+* Baekjoon 10610 [30](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/greedy/Code_10610.java)
+* Baekjoon 1080 [행렬](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/greedy/Code_1080.java)
+* Baekjoon 1201 [NMK](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/greedy/Code_1201.java)
+* Baekjoon 1783 [병든나이트](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/greedy/Code_1783.java)
+* Baekjoon 2873 [롤러코스터](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/greedy/Code_2873.java)
+
