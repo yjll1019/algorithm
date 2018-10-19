@@ -8,14 +8,10 @@ import java.util.Scanner;
  */
 
 public class Code_2873 {
-	static StringBuffer sb = new StringBuffer();
-	static StringBuffer s = new StringBuffer();//reverse용
 	
-	static void appendString(StringBuffer stringBuffer, char s, int n) {
+	public static void appendString(StringBuilder s, char c, int n) {
 		for(int i=0; i<n; ++i)
-			sb.append(s);
-		System.out.println(sb);
-		sb = new StringBuffer();
+			s.append(c);
 	}
 	
 	public static void main(String[] args) {
@@ -24,7 +20,6 @@ public class Code_2873 {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 	
-		
 		int[][] a = new int[n][m];
 		
 		for(int i=0; i<n; ++i) {
@@ -33,34 +28,38 @@ public class Code_2873 {
 			}
 		}
 		
-		if(n%2!=0) { //행홀열홀 , 행홀열짝인 경우
-			System.out.println("1번");
-			for(int i=0; i<n; ++i) { //짝수번 행일때는 오른쪽으로 m-1번, 홀수번 행일때는 왼쪽으로 m-1번, 행의 수-1만큼 아래로 
-				System.out.println("i"+i);
-				if(i%2==0)
-					appendString(sb,'R', m-1);
-				else
-					appendString(sb,'L', m-1);
-				if(i!=n-1)
-					appendString(sb,'D', 1);
-			}
-		}else if(n%2==0 && m%2==1) { //행짝열홀
-			System.out.println("2번");
+		StringBuilder sb = new StringBuilder();
+		StringBuilder s = new StringBuilder();//reverse용
 
+		if(n%2==1) { //행홀열홀 , 행홀열짝인 경우
+			for(int i=0; i<n; ++i) { //짝수번 행일때는 오른쪽으로 m-1번, 홀수번 행일때는 왼쪽으로 m-1번, 행의 수-1만큼 아래로 
+				if(i%2==0) {
+					appendString(sb,'R', m-1);
+					if(i!=n-1){
+						appendString(sb,'D', 1);
+					}
+				}else {
+					appendString(sb,'L', m-1);
+					appendString(sb,'D', 1);
+				}
+			}
+		}else if(m%2==1) { //행짝열홀
 			//짝수번 열일때는 아래로 n-1번, 홀수번 열일때는 위로 n-1번, 열의 수-1만큼 오른쪽으로 
 			for(int i=0; i<m; ++i) {
-				if(i%2==0)
+				if(i%2==0) {
 					appendString(sb,'D',n-1);
-				else
+					if(i != m-1) {
+						appendString(sb, 'R', 1);
+					}
+				}
+				else {
 					appendString(sb,'U',n-1);
-				if(i!=m-1)
 					appendString(sb,'R', 1);
+				}
 			}
-		}else if(n%2==0 && m%2==0){ //행짝열짝
-			System.out.println("3번");
-
+		}else{ //행짝열짝
 			int minX=0;
-			int minY=1;
+			int minY=1; //검은돌 중 최소값의 위치
 			
 			//최소값의 위치 찾기
 			for(int i=0; i<n; ++i) {
@@ -73,58 +72,59 @@ public class Code_2873 {
 				}
 			}
 			
-			System.out.println("minX: "+minX+" minY: "+minY+"->"+a[minX][minY]);
-			
-			//최소값과 같은 행일때까지 지점A,B를 한 행씩 이동.
-			int ax=0, ay=0;
-			while(ax!=minX) { //짝수면 오른쪽+아래 , 홀수면 왼쪽+아래 
-				if(ax%2==0) {//한줄씩 이동
-					appendString(sb,'R', m-1);
-					appendString(sb,'D', 1);
-				}else {
-					appendString(sb,'L', m-1);
-					appendString(sb,'D', 1);	
+			int x1=0, y1=0, x2=n-1, y2=m-1;
+						
+			//행이동
+			while(x2-x1>1) {//A점과 B지점이 한 줄차이 날 때까지
+				//A지점에서 내려갈 때
+				if(x1/2 < minX/2) { //최소값의 위치까지 2줄씩 이동하기 때문에 이동해도 되는지 확인.
+					appendString(sb, 'R', m-1);
+					appendString(sb, 'D', 1);
+					appendString(sb, 'L', m-1);
+					appendString(sb, 'D', 1);
+					x1+=2;
 				}
-				ax++;
-			}
-			int bx=0, by=0;
-			StringBuffer s = new StringBuffer();
-			while(bx!=minX) {
-				if(bx%2==0) { //한줄씩 이동 - 이동하는 방향이 반대이기 때문에 R>L, U>D로 바꿔서 입력
+				
+				//B지점에서 내려갈 때
+				if(minX/2 < x2/2) {
+					appendString(s, 'R', m-1);
+					appendString(s, 'D', 1);
 					appendString(s, 'L', m-1);
 					appendString(s, 'D', 1);
-				}else {
-					appendString(s, 'R', m-1);
-					appendString(s, 'D', 1);	
+					x2-=2;		
 				}
-				bx++;
 			}
 			
-			while(ay!=minY) {
-				if(ay%2==0) {
+			//열이동
+			while(y2-y1 > 1) {
+				if(y1/2 < minY/2) {
 					appendString(sb, 'D', 1);
 					appendString(sb, 'R', 1);
-				}else {
 					appendString(sb, 'U', 1);
 					appendString(sb, 'R', 1);
+					y1+=2;
 				}
-				ay++;
-			}
-			
-			while(by!=minY) {
-				if(by%2==0) {
+				if(minY/2 < y2/2) {
 					appendString(s, 'D', 1);
 					appendString(s, 'R', 1);
-				}else {
 					appendString(s, 'U', 1);
 					appendString(s, 'R', 1);
+					y2-=2;
 				}
-				by++;
+			}
+			
+			if(minY == y1) {
+				appendString(sb, 'R', 1);
+				appendString(sb, 'D', 1);
+			}else {
+				appendString(sb, 'D', 1);
+				appendString(sb, 'R', 1);
 			}
 			
 			s.reverse();
+			sb.append(s);
 		}
-		System.out.println(s);
 		
-	}	
+		System.out.println(sb);
+	}
 }	
