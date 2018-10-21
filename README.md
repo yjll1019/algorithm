@@ -154,3 +154,5 @@
 * Baekjoon 11728 [배열합치기](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_11728.java)
 * Baekjoon 11729 [하노이 탑 이동 순서](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_11729.java)
 * Baekjoon 1780 [종이의 개수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_1780.java)
+* Baekjoon 1992 [쿼드트리](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_1992.java)
+* Baekjoon 2263 [트리의 ](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_2263.java)
