@@ -164,4 +164,4 @@
 ## BinarySearch
 * Baekjoon 1939 [중량 제한](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_1939.java)
 * Baekjoon 2110 [공유기 설치](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_2110.java)
-* Baekjoon 2805 [](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_2805.java)
+* Baekjoon 2805 [나무자르기](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_2805.java)
