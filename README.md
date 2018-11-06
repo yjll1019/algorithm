@@ -160,3 +160,8 @@
 * Baekjoon 1517 [버블 소트](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_1517.java)
 * Baekjoon 2447[별찍기10](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_2447.java)
 * Baekjoon 2448[별찍기11](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/divideConquer/Code_2448.java)
+
+## BinarySearch
+* Baekjoon 1939 [중량 제한](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_1939.java)
+* Baekjoon 2110 [공유기 설치](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_2110.java)
+* Baekjoon 2805 [](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/binarySearch/Code_2805.java)
