@@ -27,7 +27,7 @@ public class Code_1561 {
 		}
 		
 		long leftTime = 0;
-		long rightTime =  2000000000L * 1000000L; //모든 놀이기구가 30분이 걸린다고 생각했을 때 모든 사람들이 놀이기구를 타기 위해 걸리는 시간
+		long rightTime =  2000000000L * 1000000L; 
 		
 		while(leftTime<=rightTime) {
 			long midTime = (rightTime+leftTime)/2;
