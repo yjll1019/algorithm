@@ -181,3 +181,6 @@
 * Baekjoon 11723[비트마스크](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_11723.java)
 * Baekjoon 10819[차이를 최대로](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_10819.java)
 * Baekjoon 9095[1,2,3 더하기](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_9095.java)
+* Baekjoon 6603[로또](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_6603.java)
+* Baekjoon 1697[숨바꼭질](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_1697.java)
+* Baekjoon 1963[소수경로](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_1963.java)
