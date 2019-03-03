@@ -1,5 +1,6 @@
 package com.mandalart_server.controller;
 
+import com.mandalart_server.model.User;
 import com.mandalart_server.service.KAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,14 +13,11 @@ public class KAuthController {
     KAuthService kAuthService;
 
     @RequestMapping
-    public void getUserInfo(@RequestParam("code") String code) {
+    public void login(@RequestParam("code") String code) {
 
-        kAuthService.getUserInfo(kAuthService.accessToken(code));
-        /* 출력 예시
-        *  id: 123456789
-        *  nickname: 홍길동
-        *  email: xxxxxxx@xxxx.com
-        * */
+        User user = kAuthService.getUser(kAuthService.accessToken(code));
+        kAuthService.login(user);
+
     }
 
 }

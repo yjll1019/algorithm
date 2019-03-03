@@ -2,6 +2,8 @@ package com.mandalart_server.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mandalart_server.dao.UserRepository;
+import com.mandalart_server.model.User;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -10,6 +12,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -18,6 +21,9 @@ import java.util.List;
 @Service
 public class KAuthServiceImpl implements KAuthService {
 
+    @Autowired
+    UserRepository userRepository;
+
     public String accessToken(String code) {
         String requestURL = "https://kauth.kakao.com/oauth/token";
         String redirect_uri = "http://localhost:8080/auth";
@@ -25,7 +31,7 @@ public class KAuthServiceImpl implements KAuthService {
         List<NameValuePair> nameValuePairs =
                 Arrays.asList(
                     new BasicNameValuePair("grant_type","authorization_code"),
-                    new BasicNameValuePair("client_id",""),
+                    new BasicNameValuePair("client_id","e98d07c15da32c585ce345d351672567"),
                     new BasicNameValuePair("redirect_uri",redirect_uri),
                     new  BasicNameValuePair("code",code)
                 );
@@ -33,7 +39,7 @@ public class KAuthServiceImpl implements KAuthService {
         CloseableHttpClient client = HttpClientBuilder.create().build();
         HttpPost httpPost = new HttpPost(requestURL);
 
-        JsonNode jsonNode = null;
+        JsonNode jsonNode;
         String access_token = "";
 
         try {
@@ -51,13 +57,14 @@ public class KAuthServiceImpl implements KAuthService {
         return access_token;
     }
 
-    public void getUserInfo(String access_token) {
+    public User getUser(String access_token) {
         String requestURL = "https://kapi.kakao.com/v2/user/me";
 
         CloseableHttpClient client = HttpClientBuilder.create().build();
         HttpGet httpGet = new HttpGet(requestURL);
 
-        JsonNode jsonNode = null;
+        JsonNode jsonNode;
+        User user = new User();
 
         try{
 
@@ -66,16 +73,27 @@ public class KAuthServiceImpl implements KAuthService {
 
             jsonNode = new ObjectMapper().readTree(response.getEntity().getContent());
 
-            String id = jsonNode.get("id").asText();
-            String nickname = jsonNode.get("properties").get("nickname").textValue();
-            String email = jsonNode.get("kakao_account").get("email").textValue();
+            user.setUserId(jsonNode.get("id").asText());
+            user.setEmail(jsonNode.get("kakao_account").get("email").textValue());
+            user.setNickname(jsonNode.get("properties").get("nickname").textValue());
 
-            System.out.println("id: " + id);
-            System.out.println("nickname: " + nickname);
-            System.out.println("email: " + email);
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+        return user;
     }
+
+    public void login(User user){
+
+        User u = userRepository.findByUserId(user.getUserId());
+
+        if(u == null) {
+            userRepository.save(user);
+            /* 토큰 부여 */
+        }
+
+        /* 토큰 부여 */
+    }
+
 }

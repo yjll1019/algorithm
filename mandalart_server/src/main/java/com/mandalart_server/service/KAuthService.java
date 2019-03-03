@@ -1,9 +1,12 @@
 package com.mandalart_server.service;
 
+import com.mandalart_server.model.User;
+
 public interface KAuthService {
 
     String accessToken(String code);
 
-    void getUserInfo(String access_token);
+    User getUser(String access_token);
 
+    void login(User user);
 }
