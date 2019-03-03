@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://sofproject.ctvcsafsshra.us-east-2.rds.amazonaws.com:3306/mandalart_project?serverTimezone=Asia/Seoul
+    username: user
+    password: #
