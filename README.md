@@ -44,6 +44,7 @@
 * Baekjoon 1927 [최소힙](https://github.com/skhucode/skhucode-yeji/blob/master/collection/Code_1927.java)
 * Baekjoon 2750 [수 정렬하기](https://github.com/skhucode/skhucode-yeji/blob/master/collection/Code_2750.java)
 * Baekjoon 7785 [회사에 있는 사람](https://github.com/skhucode/skhucode-yeji/blob/master/collection/Code_7785.java)
+
 ## Sort
 * Baekjoon 11650 [좌표 정렬하기Comparable](https://github.com/skhucode/skhucode-yeji/blob/master/sort/Code_11650_Comparable.java)
                  [/ Comparator](https://github.com/skhucode/skhucode-yeji/blob/master/sort/Code_11650_Comparator.java)
@@ -79,6 +80,7 @@
 * Baekjoon 11655 [ROT13](https://github.com/skhucode/skhucode-yeji/blob/master/string/Code_11655.java)
 * Baekjoon 11656 [접미사 배열](https://github.com/skhucode/skhucode-yeji/blob/master/string/Code_11656.java)
 * Baekjoon 2743 [단어 길이 재기](https://github.com/skhucode/skhucode-yeji/blob/master/string/Code_2743.java)
+* Baekjoon 1152 [단어의 개수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_1152.java)
 
 ## DP
 * Baekjoon 11726 [2xn 타일링](https://github.com/skhucode/skhucode-yeji/blob/master/dynamicProgramming/Code_11726.java)
@@ -101,6 +103,7 @@
 * Baekjoon 2225 [합분해](https://github.com/skhucode/skhucode-yeji/blob/master/dynamicProgramming/Code_2225.java)
 * Baekjoon 9461 [파도반 수열](https://github.com/skhucode/skhucode-yeji/blob/master/dynamicProgramming/Code_9461.java)
 * Baekjoon 2011 [암호코드](https://github.com/skhucode/skhucode-yeji/blob/master/dynamicProgramming/Code_2011.java)
+* Baekjoon 2248 [별찍기11](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/dp/Code_2248.java)
 * Baekjoon 2133 타일채우기
 
 ## Math
@@ -184,3 +187,7 @@
 * Baekjoon 6603[로또](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_6603.java)
 * Baekjoon 1697[숨바꼭질](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_1697.java)
 * Baekjoon 1963[소수경로](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/bruteForce/Code_1963.java)
+
+# etc
+* Baekjoon 1065[한수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_1065.java)
+* Baekjoon 4673[셀프 넘버](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_4673.java)
