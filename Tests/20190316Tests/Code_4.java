@@ -33,7 +33,7 @@ public class Code_4 {
 
         int add = 0;
         int mul = 1;
-
+        int max = 0;
 
         //페이지의 범위는 1~400이라 if문으로 페이지가 1,2,3자리 수일 때로 나눴음.
         for(int i=0; i<arr.length; ++i) {
@@ -53,7 +53,13 @@ public class Code_4 {
                 add = oneNum + twoNum + threeNum;
                 mul = oneNum * twoNum * threeNum;
             }
+            if(add>mul){
+                max = (add>max) ? add : max;
+            }else{
+                max = (add>max) ? add : max;
+            }
         }
-        return  (add>mul)? add : mul;
+
+        return max;
     }
 }
