@@ -81,6 +81,8 @@
 * Baekjoon 11656 [접미사 배열](https://github.com/skhucode/skhucode-yeji/blob/master/string/Code_11656.java)
 * Baekjoon 2743 [단어 길이 재기](https://github.com/skhucode/skhucode-yeji/blob/master/string/Code_2743.java)
 * Baekjoon 1152 [단어의 개수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_1152.java)
+* Baekjoon 10809 [알파벳 찾기](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_10809.java)
+* Baekjoon 11654 [아스키 코드](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_11654.java)
 
 ## DP
 * Baekjoon 11726 [2xn 타일링](https://github.com/skhucode/skhucode-yeji/blob/master/dynamicProgramming/Code_11726.java)
@@ -191,3 +193,8 @@
 # etc
 * Baekjoon 1065[한수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_1065.java)
 * Baekjoon 4673[셀프 넘버](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_4673.java)
+* Baekjoon 2577[숫자의 개수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_2577.java)
+* Baekjoon 8958[OX퀴즈](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_8958.java)
+* Baekjoon 8958_2[OX퀴즈](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_8958_2.java)
+* Baekjoon 10039[평균 점수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_10039.java)
+* Baekjoon 2920[음계](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/Code_2920.java)
