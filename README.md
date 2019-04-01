@@ -83,6 +83,8 @@
 * Baekjoon 1152 [단어의 개수](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_1152.java)
 * Baekjoon 10809 [알파벳 찾기](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_10809.java)
 * Baekjoon 11654 [아스키 코드](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_11654.java)
+* Baekjoon 2675 [문자열 반복](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_2675.java)
+* Baekjoon 1157 [단어 공부](https://github.com/yjll1019/Algorithm/blob/master/Baekjoon/string/Code_1157.java)
 
 ## DP
 * Baekjoon 11726 [2xn 타일링](https://github.com/skhucode/skhucode-yeji/blob/master/dynamicProgramming/Code_11726.java)
